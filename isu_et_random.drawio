@@ -1,0 +1,80 @@
+<mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/132.0.0.0 Safari/537.36" compressed="false" version="24.8.4">
+  <diagram name="Page-1" id="-GgADEnqL7QRwjAS-YSb">
+    <mxGraphModel dx="1195" dy="682" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="850" pageHeight="1100" math="0" shadow="0">
+      <root>
+        <mxCell id="0" />
+        <mxCell id="1" parent="0" />
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-1" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;newItem&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=CaskaydiaCove Nerd Font;" vertex="1" parent="1">
+          <mxGeometry x="385" y="80" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-2" value="&lt;h1&gt;&lt;font face=&quot;CaskaydiaCove Nerd Font&quot;&gt;ISU Equipped Translucent Random Setup&lt;/font&gt;&lt;/h1&gt;" style="text;html=1;align=center;verticalAlign=middle;whiteSpace=wrap;rounded=0;" vertex="1" parent="1">
+          <mxGeometry y="30" width="850" height="30" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-3" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=8;rounded=0;dashPattern=1 4;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="40" y="120" as="sourcePoint" />
+            <mxPoint x="360" y="120" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-4" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=8;rounded=0;dashPattern=1 4;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="119.5" as="sourcePoint" />
+            <mxPoint x="840" y="119.5" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-5" value="&lt;p style=&quot;line-height: 100%;&quot;&gt;&lt;/p&gt;&lt;h1 style=&quot;margin-top: 0px; line-height: 57%;&quot;&gt;&lt;font face=&quot;CaskaydiaCove Nerd Font&quot;&gt;&lt;span style=&quot;font-size: 14px; font-weight: 400;&quot;&gt;In order to use equipped translucent items other than newItem as gadgets, list1.mOffset must be 0x20 in order to read the name vptr from mListNode.mNext for each equipped translucent item (reading from mListNode.mPrev will read &amp;amp;list1.mStartEnd for the first item, crashing immediately). Here, we use any trigger to set mOffset to 0x20 (the most significant nonzero byte of the pointer in x9):&lt;br&gt;stur x9, [x0, #-0x28]; str x8, [x0]; ret&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;div style=&quot;&quot;&gt;&lt;font face=&quot;CaskaydiaCove Nerd Font&quot;&gt;&lt;span style=&quot;font-size: 14px;&quot;&gt;As mOffset is not normally supposed to change during iteration through sead::OffsetList objects, Clang optimized it as constant, so it is read once at the start of the loop and the same offset is used throughout. Therefore, changing the offset only affects subsequent iterations.&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="10" y="160" width="830" height="180" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-24" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;dashed=1;" edge="1" parent="1" source="b_Z4Wu49CTBc0JAxHN4Z-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10" y="419.8571428571429" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-25" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" target="b_Z4Wu49CTBc0JAxHN4Z-8">
+          <mxGeometry relative="1" as="geometry">
+            <mxPoint x="10" y="379.8571428571429" as="sourcePoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-26" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_Z4Wu49CTBc0JAxHN4Z-8" target="b_Z4Wu49CTBc0JAxHN4Z-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-8" value="&lt;font style=&quot;font-size: 32px;&quot;&gt;?&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=CaskaydiaCove Nerd Font;" vertex="1" parent="1">
+          <mxGeometry x="40" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-27" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="b_Z4Wu49CTBc0JAxHN4Z-13" target="b_Z4Wu49CTBc0JAxHN4Z-8">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-30" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_Z4Wu49CTBc0JAxHN4Z-13" target="b_Z4Wu49CTBc0JAxHN4Z-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-13" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;mov x1, xzr&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=CaskaydiaCove Nerd Font;" vertex="1" parent="1">
+          <mxGeometry x="160" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-31" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="b_Z4Wu49CTBc0JAxHN4Z-16" target="b_Z4Wu49CTBc0JAxHN4Z-13">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-36" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=1;exitY=0.25;exitDx=0;exitDy=0;entryX=0;entryY=0.25;entryDx=0;entryDy=0;" edge="1" parent="1" source="b_Z4Wu49CTBc0JAxHN4Z-16" target="b_Z4Wu49CTBc0JAxHN4Z-34">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-16" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;add x1, x1, w9, SXTW&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=CaskaydiaCove Nerd Font;" vertex="1" parent="1">
+          <mxGeometry x="280" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-35" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;exitX=0;exitY=0.75;exitDx=0;exitDy=0;entryX=1;entryY=0.75;entryDx=0;entryDy=0;dashed=1;" edge="1" parent="1" source="b_Z4Wu49CTBc0JAxHN4Z-34" target="b_Z4Wu49CTBc0JAxHN4Z-16">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-34" value="&lt;font style=&quot;font-size: 16px;&quot;&gt;Random&lt;/font&gt;" style="whiteSpace=wrap;html=1;aspect=fixed;fontFamily=CaskaydiaCove Nerd Font;" vertex="1" parent="1">
+          <mxGeometry x="400" y="360" width="80" height="80" as="geometry" />
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-37" value="" style="endArrow=none;dashed=1;html=1;strokeWidth=8;rounded=0;dashPattern=1 4;" edge="1" parent="1">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="399.66" as="sourcePoint" />
+            <mxPoint x="840" y="399.66" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="b_Z4Wu49CTBc0JAxHN4Z-40" value="&lt;p style=&quot;line-height: 100%;&quot;&gt;&lt;/p&gt;&lt;h1 style=&quot;margin-top: 0px; line-height: 57%;&quot;&gt;&lt;font face=&quot;CaskaydiaCove Nerd Font&quot;&gt;&lt;span style=&quot;font-size: 14px; font-weight: 400;&quot;&gt;Iterating again, now with mOffset == 0x20, every item&#39;s mListNode.mNext is treated as the vptr of its mName, essentially creating a value setup that reads from the next item. This means that equipped translucent items, set up with pointers to the above gadgets (and GenerateCryptographicallyRandomBytes), begin at the second item, with the first only serving to call the first gadget.&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px; line-height: 57%;&quot;&gt;&lt;font face=&quot;CaskaydiaCove Nerd Font&quot;&gt;&lt;span style=&quot;font-size: 14px; font-weight: 400;&quot;&gt;The first two gadgets set x1 to as high of a value as is possible and safe for the size passed to GenerateCryptographicallyRandomBytes, by reading the lower half of the pointer in x9 (the most significant 11 bits of which are randomized).&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;h1 style=&quot;margin-top: 0px; line-height: 57%;&quot;&gt;&lt;font face=&quot;CaskaydiaCove Nerd Font&quot;&gt;&lt;span style=&quot;font-size: 14px; font-weight: 400;&quot;&gt;The final item calls the CSRNG, which is then used to set up more gadgets in the remaining items. These gadgets may vary depending on the goal of the TAS, but achieving full control generally requires:&lt;/span&gt;&lt;/font&gt;&lt;/h1&gt;&lt;div&gt;&lt;font face=&quot;CaskaydiaCove Nerd Font&quot;&gt;&lt;span style=&quot;font-size: 14px; font-weight: 400;&quot;&gt;- Resetting mOffset to 0x8&lt;br&gt;- Using a corrupted vptr outside the inventory to call CSRNG on the stack&lt;br&gt;- Overwriting return addresses to create a ROP chain that:&lt;br&gt;- Calls CSRNG on the entire heap&lt;br&gt;- Leaves an easily callable trigger in a fabricated vtable to perform a useful action (e.g. calling CSRNG or jumping to a controllable address)&lt;/span&gt;&lt;/font&gt;&lt;/div&gt;&lt;p&gt;&lt;/p&gt;" style="text;html=1;whiteSpace=wrap;overflow=hidden;rounded=0;align=center;" vertex="1" parent="1">
+          <mxGeometry x="10" y="440" width="830" height="370" as="geometry" />
+        </mxCell>
+      </root>
+    </mxGraphModel>
+  </diagram>
+</mxfile>
